@@ -8,14 +8,14 @@ A Customer Relationship Management backend application made for learning purpose
 [Live demo](https://open-crm-demo.onrender.com/swagger-ui/index.html) (might take a while to wake up the app)
 
 ## 📖 Table of Contents
-* [General Information](#📝-general-information)
-* [Features](#✨-features)
-* [Usage](#🎡-usage)
-* [Tech stack](#🛠-tech-stack)
-* [Learning goals](#💡-learning-goals)
-* [Road map](#🏗️-road-map)
-* [Project status](#🌱-project-status)
-* [License](#⚖️-license)
+* [General Information](https://github.com/mslabek/open-crm-backend#-general-information)
+* [Features](https://github.com/mslabek/open-crm-backend#-features)
+* [Usage](https://github.com/mslabek/open-crm-backend#-usage)
+* [Tech stack](https://github.com/mslabek/open-crm-backend#-tech-stack)
+* [Learning goals](https://github.com/mslabek/open-crm-backend#-learning-goals)
+* [Road map](https://github.com/mslabek/open-crm-backend#%EF%B8%8F-road-map)
+* [Project status](https://github.com/mslabek/open-crm-backend#-project-status)
+* [License](https://github.com/mslabek/open-crm-backend#%EF%B8%8F-license)
 
 
 ## 📝 General Information
