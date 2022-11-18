@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ import java.util.List;
  * {@code Rest controller} handling requests referring to {@link Order orders}.
  */
 @Tag(name = "Order", description = "Operations referring to orders")
+@SecurityRequirement(name = "cookieAuth")
 @RestController
 @RequestMapping("/order")
 @RequiredArgsConstructor

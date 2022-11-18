@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import java.util.List;
  * {@code Rest controller} handling requests referring to {@link Inventory inventory}.
  */
 @Tag(name = "Inventory", description = "Operations referring to inventory")
+@SecurityRequirement(name = "cookieAuth")
 @RestController
 @RequestMapping("/inventory")
 @PreAuthorize("hasRole('ROLE_INVENTORY')")

@@ -2,7 +2,9 @@ package com.application.opencrm.user.controller;
 
 import com.application.opencrm.user.dto.LoginRequest;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.headers.Header;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +26,7 @@ public class LoginController {
      */
     @PostMapping("/login")
     @Operation(summary = "Authenticates the user and returns an authentication cookie", description = "Required authorization role: none", requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(description = "JSON object containing the login and password"))
-    @ApiResponse(responseCode = "200", description = "Authentication successful. Session cookie is returned as cookie 'JSESSION'. This cookie is used to authenticate the user and needs to be included in subsequent requests.")
+    @ApiResponse(responseCode = "200", description = "Authentication successful. Session cookie is returned as cookie 'JSESSION'.", headers = @Header(name = "set-cookie", description = "identifies a user and needs to be included in subsequent requests", schema = @Schema(type = "String")))
     @ApiResponse(responseCode = "401", description = "Authentication unsuccessful", content = @Content)
     @ApiResponse(responseCode = "5xx", description = "Unexpected error", content = @Content)
     public void login(@RequestBody LoginRequest loginRequest) {

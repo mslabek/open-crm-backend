@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,7 @@ import javax.validation.constraints.Min;
  * {@code Rest controller} handling requests referring to {@link Contact contacts} of a specified {@link Client client}.
  */
 @Tag(name = "Client | Contact", description = "Operations referring to contacts")
+@SecurityRequirement(name = "cookieAuth")
 @RestController
 @PreAuthorize("hasRole('ROLE_SALES')")
 @RequiredArgsConstructor
